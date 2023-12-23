@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10ch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <!--NavBar Section-->
+    <nav class="topnav" id="myTopnav">
+        <a class="active" href="index.html">Main</a>
+        <a href="pages/search.html">Search</a>
+        <a href="pages/profile.html">Profile</a>
+        <a href="pages/post.html">Add Post</a>
+        <button id="login-button">Login</button>
+        <span id="logined-as"></span>
+        <button style="display:none" id="logout-button">Logout</button>
+
+        <div class="login-modal" id="login-modal" style="display: none;">
+            <div class="modal-login-content">
+                <span class="close-login-btn">&times;</span>
+                <form id="login-form" class="modal">
+                    <h3>Please sign in to continue</h3>
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Username">
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </p>
+                    <p>
+                        <input type="submit" value="Sign In">
+                    </p>
+                </form>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="navButton()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+</header>
+<main>
+    <div id="posts"></div>
+</main>
+</body>
+</html>

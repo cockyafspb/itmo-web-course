@@ -1,0 +1,316 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    min-width: 460px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.subforum{
+    margin-top:20px;
+}
+
+.subforum-title{
+    background-color:#333;
+    padding: 5px;
+    border-radius: 5px;
+    margin:4px;
+    color: #dddddd;
+    width: 100%;
+}
+
+.subforum-row{
+    display: grid;
+    grid-template-columns: 15% 60% 15%;
+}
+
+
+.view-comments {
+    display: none; /* скрываем модальное окно по умолчанию */
+    position: fixed; /* фиксируем модальное окно на экране */
+    z-index: 1; /* устанавливаем z-index для модального окна */
+    top: 0; left: 0;
+    width: 100%; height: 100%; /* устанавливаем ширину и высоту модального окна */
+    overflow: auto; /* включаем прокрутку, если контент модального окна выходит за границы экрана */
+    background-color: rgba(0,0,0,0.4); /* устанавливаем цвет фона модального окна */
+}
+
+.modal-comments-content {
+    background-color: #fff; /* задаем фон модальному окну */
+    margin: 15% auto; /* устанавливаем отступы от верхнего края экрана */
+    padding: 20px;
+    border: 1px solid #888; /* задаем рамку модальному окну */
+    width: 80%; /* устанавливаем ширину модального окна */
+}
+
+.close-comm-btn {
+    color: #aaa; /* задаем цвет кнопки закрытия модального окна */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-comm-btn:hover,
+.close-comm-btn:focus {
+    color: black; /* меняем цвет кнопки закрытия при наведении курсора мыши */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-modal {
+    display: none; /* скрываем модальное окно по умолчанию */
+    position: fixed; /* фиксируем модальное окно на экране */
+    z-index: 1; /* устанавливаем z-index для модального окна */
+    top: 0; left: 0;
+    width: 100%; height: 100%; /* устанавливаем ширину и высоту модального окна */
+    overflow: auto; /* включаем прокрутку, если контент модального окна выходит за границы экрана */
+    background-color: rgba(0,0,0,0.4); /* устанавливаем цвет фона модального окна */
+}
+
+.modal-login-content {
+    background-color: #fff; /* задаем фон модальному окну */
+    margin: 15% auto; /* устанавливаем отступы от верхнего края экрана */
+    padding: 20px;
+    border: 1px solid #888; /* задаем рамку модальному окну */
+    width: 80%; /* устанавливаем ширину модального окна */
+}
+
+.close-login-btn {
+    color: #aaa; /* задаем цвет кнопки закрытия модального окна */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: #333;
+}
+
+
+.close-login-btn:hover,
+.close-login-btn:focus {
+    color: black; /* меняем цвет кнопки закрытия при наведении курсора мыши */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.subforum-column{
+    padding: 10px;
+    margin:4px;
+    border-radius: 5px;
+    background-color:#ddd;
+}
+
+.subforum-description *{
+    margin-block: 0;
+    overflow: hidden;
+
+}
+
+.subforum-stats *{
+    margin-block: 0;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-devider{
+    display: none;
+
+}
+
+.subforum-description{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.vote-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.like{
+    font-size:24px;
+    user-select: none;
+}
+.plus {
+    color:green;
+}
+.minus{
+    color:red;
+}
+.cursor{
+    cursor:pointer;
+}
+/* Стиль ввода, выделение элементов и текстовых областей */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Стиль метки для отображения рядом с входными данными */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+/* Стиль кнопки "Отправить" */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Стиль контейнера */
+.form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Плавающая колонка для этикеток: ширина 25% */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Плавающая колонка для входа: ширина 75% */
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Очистить поплавки после столбцов */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Адаптивный макет - когда экран меньше 600 пикселей в ширину, сделайте два столбца укладываются друг на друга, а не рядом друг с другом */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 460px) {
+
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    .subforum-devider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+    }
+}
+@media screen and (max-width: 461px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 461px) and (max-width: 1024px) {
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+}
