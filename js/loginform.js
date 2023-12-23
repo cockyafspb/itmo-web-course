@@ -94,7 +94,7 @@ const updateNavbar = (user) => {
 
         // Set the addEventButton element
         addEventButton.innerHTML = `Add Event`;
-        addEventButton.href = "/pages/add-event.html";
+        addEventButton.href = "/add-event.html";
         addEventButton.addEventListener("click", addEvent);
 
         // Set the blockUserButton element
